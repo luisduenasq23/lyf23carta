@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paraflor</title>
+    <link rel="stylesheet" href="vday.css">
+</head>
+<body>
+    <!-- Página 1 -->
+    <div class="valentines_card">
+        <div class="front_card">
+            <img src="lyf.png" class="front_img">
+            <div class="front_text">
+                <h3>Espero que te guste con mucho cariño de: L.Angel.D.Q</h3>
+            </div>    
+        </div>
+        <div class="inside_card">
+            <div class="gallery">
+                <img src="inside.png" class="inside_img" id="gallery_img">
+                <button onclick="prevImage()">&#9664;</button>
+                <button onclick="nextImage()">&#9654;</button>
+            </div>
+            <div>
+                <audio controls>
+                    <source src="NuestraMusica23.mp3" type="audio/mp3">
+                </audio>  
+            </div>
+            <div class="inside_text">
+                <h4>.Hola, Flor.
+
+                    Espero que estés bien. Sé que ha pasado mucho tiempo desde que tuvimos nuestra relación y desde entonces nuestras vidas han seguido caminos diferentes. Sin embargo, hoy no puedo evitar pensar en lo que una vez compartimos y lo mucho que significó para mí.
+                    
+                    He pasado muchas noches recordando esos momentos llenos de risas y sueños compartidos. Y aunque la vida nos llevó por rumbos distintos, siempre has ocupado un lugar especial en mi corazón. Me doy cuenta de que, a pesar del tiempo y la distancia, mis sentimientos por ti no han cambiado.
+                    
+                    A veces me pregunto qué habría pasado si hubiéramos luchado un poco más, si hubiéramos tenido la oportunidad de crecer juntos en lugar de separados. Pero sé que no tiene sentido vivir en el pasado. Hoy, me atrevo a escribirte porque siento que, en este momento de nuestras vidas, estamos en un lugar donde quizás podamos redescubrirnos.
+                    
+                    Flor, quiero que sepas que todavía te quiero.</h4>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Página 2 -->
+    <div class="inside_card second_page" style="display: none;">
+        <div class="content">
+            <h2>Más Texto Aquí</h2>
+            <p>Este es un texto adicional que puedes añadir en la segunda página de tu tarjeta de San Valentín. Puedes escribir todo lo que quieras aquí para expresar tus sentimientos y emociones de una manera más detallada.</p>
+            <p>Sigue escribiendo hasta que sientas que has dicho todo lo que necesitas decir. ¡Tu ser querido seguro apreciará tus palabras y el esfuerzo que has puesto en esta tarjeta!</p>
+        </div>
+    </div>
+
+    <!-- Página 3 -->
+    <div class="inside_card third_page" style="display: none;">
+        <div class="content">
+            <h2>Texto Adicional</h2>
+            <p>Aquí puedes agregar más texto para expresar tus sentimientos y emociones. ¡Sé creativo y sincero!</p>
+        </div>
+    </div>
+
+    <script>
+        const images = ["flor.jpeg", "flor2.jpeg", "flor3.jpeg"];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const imgElement = document.getElementById("gallery_img");
+            imgElement.src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>

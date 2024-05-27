@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 16px;
+    height: 100vh;
+    background: #ffc0cb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valentines_card {
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+}
+
+.front_img {
+    width: 450px;
+    margin-right: -50px;
+    margin-left: -50px; 
+    margin-top: 100px;
+    position: relative; 
+}
+
+.inside_img {
+    width: 200px;
+    height: 200px; /* Mantener las imágenes cuadradas */
+    margin: auto;
+    margin-top: 20px; /* Reducir el margen superior */
+    position: relative; 
+    object-fit: cover; /* Asegurar que la imagen se ajuste al contenedor sin deformarse */
+}
+
+.valentines_card:hover .front_card {
+    transform: rotateY(-160deg); 
+}
+
+.valentines_card:hover .front_text {
+    display: none;
+}
+
+.front_text, .inside_text {
+    color: #A60657;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+}
+
+.front_card {
+    position: relative;
+    overflow: hidden;
+    transform-origin: left;
+    margin: 40px auto;
+    padding: 16px;
+    background-color: whitesmoke;
+    text-align: center;
+    box-shadow: 0 24px 40px -8px #ff1493;
+    width: 450px;
+    height: 800px;
+}
+
+.inside_card {
+    position: absolute;
+    overflow: hidden;
+    transform-origin: left;
+    margin: 40px auto;
+    padding: 16px;
+    background-color: whitesmoke;
+    text-align: center;
+    box-shadow: 0 24px 40px -8px #ff1493;
+    width: 450px;
+    height: 800px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+.valentines_card audio {
+    display: none;
+}
+
+.valentines_card:hover .front_img {
+    display: none;
+}
+
+.inside_card audio {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+.gallery {
+    position: relative;
+    text-align: center;
+    width: 200px; /* Ajusta este valor según el tamaño deseado */
+    height: 200px; /* Mantener el contenedor cuadrado */
+    margin: auto;
+}
+
+.gallery button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px; /* Reducir el tamaño de los botones */
+    cursor: pointer;
+}
+
+.gallery button:nth-of-type(1) {
+    left: -25px; /* Ajustar la posición de los botones */
+}
+
+.gallery button:nth-of-type(2) {
+    right: -25px; /* Ajustar la posición de los botones */
+}
+
+/* Estilos para la segunda página */
+.second_page, .third_page {
+    margin-top: 40px; /* Añadir espacio entre las páginas */
+    text-align: center;
+    width: 450px; /* Ajustar el ancho para que coincida con el de las otras páginas */
+    height: 800px; /* Ajustar la altura para que coincida con el de las otras páginas */
+    background-color: whitesmoke;
+    box-shadow: 0 24px 40px -8px #ff1493;
+    display: none; /* Ocultar las páginas adicionales inicialmente */
+}
+
+.second_page .content, .third_page .content {
+    padding: 20px;
+}
+
+.second_page h2, .third_page h2 {
+    color: #A60657;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 36px;
+    margin-bottom: 20px; /* Añadir espacio entre el título y el párrafo */
+}
+
+.second_page p, .third_page p {
+    color: #A60657;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
